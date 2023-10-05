@@ -1,4 +1,4 @@
-NAME		:= an_orthodox_fixer
+NAME		:= fixed
 
 CC			:= clang++
 CFLAGS		:= -std=c++98 -Wall -Wextra -Werror
