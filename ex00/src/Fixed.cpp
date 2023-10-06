@@ -9,7 +9,7 @@ Fixed::Fixed(void): _fixedPointValue(0)
 Fixed::Fixed(const Fixed &other)
 {
   std::cout << "Copy constructor called" << std::endl;
-  this->operator=(other);
+  *this = other;
 }
 
 Fixed::~Fixed(void)
