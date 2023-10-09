@@ -100,6 +100,19 @@ Fixed Fixed::operator/(const Fixed &rhs) const
   return (result);
 }
 
+Fixed &Fixed::operator++(void)
+{
+  ++this->_fixedPointValue;
+  return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+  Fixed tmp(*this);
+  ++(*this);
+  return (tmp);
+}
+
 /* Member Functions */
 
 int Fixed::getRawBits(void) const
