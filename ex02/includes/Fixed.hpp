@@ -27,6 +27,10 @@ class Fixed
     Fixed operator++(int);
     Fixed &operator--(void);
     Fixed operator--(int);
+    static Fixed  &min(Fixed &left, Fixed &right);
+    static const Fixed  &min(const Fixed &left, const Fixed &right);
+    static Fixed  &max(Fixed &left, Fixed &right);
+    static const Fixed  &max(const Fixed &left, const Fixed &right);
 
     int getRawBits(void) const;
     void setRawBits(int const raw);

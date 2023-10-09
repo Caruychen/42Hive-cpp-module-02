@@ -118,6 +118,34 @@ Fixed Fixed::operator--(int)
   return (tmp);
 }
 
+Fixed  &Fixed::min(Fixed &left, Fixed &right)
+{
+  if (left.getRawBits() < right.getRawBits())
+    return (left);
+  return (right);
+}
+
+const Fixed  &Fixed::min(const Fixed &left, const Fixed &right)
+{
+  if (left.getRawBits() < right.getRawBits())
+    return (left);
+  return (right);
+}
+
+Fixed  &Fixed::max(Fixed &left, Fixed &right)
+{
+  if (left.getRawBits() > right.getRawBits())
+    return (left);
+  return (right);
+}
+
+const Fixed  &Fixed::max(const Fixed &left, const Fixed &right)
+{
+  if (left.getRawBits() > right.getRawBits())
+    return (left);
+  return (right);
+}
+
 /* Member Functions */
 
 int Fixed::getRawBits(void) const
