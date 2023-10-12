@@ -64,12 +64,18 @@ bool  Fixed::operator!=(const Fixed &rhs) const
 
 Fixed Fixed::operator+(const Fixed &rhs) const
 {
-  return (Fixed(this->_fixedPointValue + rhs.getRawBits()));
+  Fixed result;
+
+  result.setRawBits(this->_fixedPointValue + rhs.getRawBits());
+  return (result);
 }
 
 Fixed Fixed::operator-(const Fixed &rhs) const
 {
-  return (Fixed(this->_fixedPointValue - rhs.getRawBits()));
+  Fixed result;
+
+  result.setRawBits(this->_fixedPointValue - rhs.getRawBits());
+  return (result);
 }
 
 Fixed Fixed::operator*(const Fixed &rhs) const
